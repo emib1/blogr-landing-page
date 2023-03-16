@@ -1,0 +1,440 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+}
+
+/**********   header    ******************/
+
+.desktop-nav{
+    display: none;
+}
+
+header{
+    background-image: url("/images/bg-pattern-intro-mobile.svg"),linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%)) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    font-family: 'Overpass', sans-serif;
+    border-bottom-left-radius: 7rem;
+}
+
+
+.hide{
+    display: none;
+}
+
+.mobile-nav{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+}
+
+.open{
+    position: relative;
+    /* margin-left: 4rem; */
+    cursor: pointer;
+}
+
+.close{
+    position: relative;
+    /* margin-left: 4rem; */
+    cursor: pointer;
+}
+
+.mobile-nav ul {
+    list-style: none;
+}
+
+.main-ul{
+    position: absolute;
+    left: 5%;
+    background-color: white;
+    padding: 1rem;
+    width: 90vw;
+    border-radius: 7px;
+   margin-top: 1rem;
+    text-align: center;
+    color: hsl(240, 10%, 16%);
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+.main-ul ul{
+    background-color: hsla(240, 2%, 79%, 0.2);
+}
+
+.main-ul li {
+    margin-bottom: 0.6rem;
+    padding: 1rem;
+}
+
+.main-ul li img{
+    cursor: pointer;
+}
+
+.connect{
+    border-bottom: 2px solid hsla(240, 2%, 79%, 0.6);
+    margin-bottom: 1rem;
+}
+
+
+.main-ul li:nth-child(5){
+    background-color:hsl(353, 100%, 62%);
+    width: 50%;
+    margin: auto;
+    border-radius: 25px;
+    color: white;
+    cursor: pointer;
+}
+
+
+.scale{
+    transform:scale(1,-1);
+}
+
+.header-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-text{
+    margin: auto 0;
+}
+
+.header-text h1, .header-text p{
+    margin-bottom: 1rem;
+}
+
+.header-text button{
+    padding: 0.7rem 1.4rem;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 15px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.header-text button:nth-child(1){
+   background-color: white;
+   border: none;
+   color: hsl(355, 100%, 74%);
+}
+.header-text button:nth-child(2){
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    margin-left: 1rem;
+}
+
+@media screen and (min-width:570px){
+    .mobile-nav{
+        display: none;
+    }
+
+    .desktop-nav{
+        display: grid;
+        justify-content: space-between;
+        padding: 1.5rem;
+        grid-template-columns: 1fr 1fr 1fr;
+
+    }
+    .desktop-nav nav{
+        padding: 1rem;
+
+    }
+
+    .desktop-nav nav ul {
+        list-style: none;
+    }
+    .desktop-ul{
+        display: grid;
+       grid-template-columns: repeat(3, 3fr);
+       gap: 15px;
+    }
+    .desktop-ul ul{
+        background-color: white;
+        padding: 1rem;
+        border-radius: 7px;
+    }
+    .desktop-ul ul li {
+        color: hsl(208, 49%, 24%);
+        display: flex;
+        margin: 0.5rem 0;
+        cursor: pointer;
+    }
+    .desktop-ul li span:hover{
+        padding: 0.3rem 0;
+        border-bottom: 2px solid;
+        cursor: pointer;
+    }
+    .desktop-ul li img{
+        cursor: pointer;
+    }
+
+    .header-buttons{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-left: 1rem;
+    }
+
+    .header-buttons button:nth-child(2){
+        background-color: white;
+        border: none;
+        color: hsl(355, 100%, 74%);
+
+     }
+    
+     .header-buttons button:nth-child(2):hover{
+        background-color: hsl(355, 100%, 74%);
+        color: white;
+     }
+
+    .header-buttons button:nth-child(1){
+        background-color: transparent;
+        border: none;
+        color: white;
+  
+    }
+     .header-buttons button{
+        padding: 0.5rem 1rem;
+        font-family: 'Ubuntu', sans-serif;
+        border-radius: 15px;
+        cursor: pointer;
+        font-weight: 500;
+        height:47px;
+        font-size: 16px;
+    }
+    .header-text button:nth-child(1):hover{
+        background-color: hsl(355, 100%, 74%);
+        color: white;
+        border: none;
+     }
+     .header-text button:nth-child(2):hover{
+        color: hsl(355, 100%, 74%);
+        background-color: white;
+        border: none;
+     }
+
+}
+
+
+/********** main section1**********/
+main{
+    text-align: center;
+    font-family: 'Overpass', sans-serif;
+}
+
+main h2, h3{
+    color: hsl(208, 49%, 24%);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+    margin: 2rem 0;
+}
+
+
+.desgined {
+    display: flex;
+    flex-direction: column-reverse;
+}
+.designed-img{
+    background-image:url("/images/illustration-editor-mobile.svg");
+    width: 500px;
+    height: 410px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: auto;
+}
+
+.designed-text-item{
+    width: 80%;
+    margin: auto;
+}
+.designed-text-item:last-child{
+    margin-bottom: 19rem;
+}
+
+@media screen and (min-width:570px){
+    .desgined {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .designed-img{
+        background-image:url("/images/illustration-editor-desktop.svg");
+        height: 450px; 
+        background-position: left;
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+    }
+    .designed-text-item{
+        width: 90%;
+        margin: auto;
+    }
+    .designed-text-item:last-child{
+        margin-bottom: 5rem;
+    }
+}
+
+/********* main section2**********/
+.state{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    /* align-items: center; */
+    background:url("/images/bg-pattern-circles.svg");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: hsl(208, 49%, 24%);
+    border-top-right-radius: 7rem;
+
+}
+.state-text{
+    color: white;
+    padding: 3rem;
+    margin-top: 6rem;
+}
+.state-text h2{
+    color: white;
+}
+
+.state-img img{
+    position: absolute;
+     top: -60%;
+     left: 0;
+     height: 70vh;
+     width: 500px;
+    /* width: 100%; */
+}
+
+@media screen and (min-width:570px){
+    .state{
+        display: flex;
+        flex-direction: row;
+        background-position: left;
+        background-size: 55%;
+        border-bottom-left-radius: 7rem;
+        align-items: center;
+        margin-bottom: 4rem;
+        padding: -4rem;
+
+    }
+    .state-img img {
+        position: relative;
+        top: 0%;
+        left: 0;
+        max-height: 100%;
+        width: 100%;
+    }
+    .state-text{
+        color: white;
+        padding: 1rem;
+        width: 50%;
+    }
+}
+
+
+
+/********* main section3 **********/
+
+.free-img{
+    background-image:url("/images/illustration-laptop-mobile.svg");
+    width: 500px;
+    height: 430px;
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    margin: auto;
+}
+
+.free-text-item{
+    width: 80%;
+    margin: auto;
+}
+
+.free-text-item:last-child{
+    margin-bottom: 4rem;
+}
+
+@media screen and (min-width:570px){
+    .free{
+        display: flex;
+        margin-bottom: 4rem;
+    }
+    .free-text-item{
+        width: 100%;
+    }
+
+    .free-img  {
+        background-image:url("/images/illustration-laptop-desktop.svg");
+        max-width: 550px;
+        max-height: 550px;
+        background-repeat: no-repeat;
+        background-size: cover;
+       background-position: right;
+       margin: auto;
+    }
+
+    .free-text{
+        width: 50%;
+    }
+
+    .free-text-item:last-child{
+        margin-bottom: 0rem;
+    }
+}
+
+/******************   footer *******************/
+
+footer{
+    background-color: hsl(240, 10%, 16%);
+    padding: 2rem;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    border-top-right-radius: 7rem;
+}
+
+footer img{
+    margin-bottom: 2rem;
+}
+
+footer ul{
+    list-style: none;
+    cursor: pointer;
+}
+
+.main-list{
+    color: white;
+    /* font-weight: 700; */
+}
+.main-list h4{
+    margin:1rem 0;
+}
+.main-list li{
+    margin: 0.5rem 0;
+}
+
+.main-list li{
+    color: hsla(240, 2%, 79%, 0.9);
+}
+
+
+@media screen and (min-width:570px){
+    .main-list {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    footer img{
+        height: 45px;
+    }
